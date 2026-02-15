@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Slytherin: База знаний</title>
+    <style>
+        :root {
+            --bg-color: #1a221e;       /* Глубокий матовый зеленый */
+            --card-bg: #242c28;        /* Матовый графит для карточек */
+            --soft-green: #5c8d73;     /* Приглушенный изумруд */
+            --silver: #b2bdb5;         /* Матовое серебро */
+            --text-main: #d1d9d4;      /* Мягкий светлый текст */
+        }
+
+        body {
+            font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 15px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 0 35px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--silver);
+            margin: 0;
+        }
+
+        .motto {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: var(--soft-green);
+            text-transform: uppercase;
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .card-h {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--silver);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bot-path {
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(92, 141, 115, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            font-family: ui-monospace, monospace;
+            font-size: 13px;
+            color: var(--soft-green);
+            margin: 10px 0;
+            display: block;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--soft-green);
+        }
+
+        b {
+            color: var(--silver);
+            font-weight: 600;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid var(--soft-green);
+        }
+
+        .alert-box {
+            background: rgba(189, 100, 100, 0.08);
+            border: 1px solid rgba(189, 100, 100, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .staff-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .staff-item {
+            font-size: 14px;
+            padding: 12px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.03);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 13px;
+        }
+
+        .footer-motto {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: var(--soft-green);
+            margin-bottom: 15px;
+            opacity: 0.6;
+        }
+
+        .cookie {
+            color: var(--silver);
+            opacity: 0.5;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Slytherin</h1>
+        <div class="motto">Ambitio • Potentia • Puritas</div>
+    </header>
+
+    <!-- ПАСПОРТ -->
+    <div class="card">
+        <div class="card-h">🆔 Твой идентификатор</div>
+        Твой личный <b>🆔 (паспорт)</b> необходим для участия в турнирах, дуэлях и регистрации на занятиях.
+        <span class="bot-path">Меню → Профиль студента → Паспорт</span>
+    </div>
+
+    <!-- ОБУЧЕНИЕ -->
+    <div class="card">
+        <div class="card-h">📚 Обучение и досуг</div>
+        <ul>
+            <li><b>Настоящие уроки:</b> Занятия проходят по 3-м выбранным предметам. Расписание всегда в закрепе. <b>Важно:</b> после входа в кабинет обязательно зачекиньтесь.
+                <span class="bot-path">Меню → Учебный корпус</span>
+            </li>
+            <li><b>Турниры:</b> Битвы за честь факультета. Не стесняйтесь отправлять свой ID в <a href="https://t.me/+8jpNpeawSN85NjVi">Большой зал</a>.</li>
+            <li><b>Магические викторины:</b> Проходят вечерами в гостиной. Во время вопросов — полная тишина. За спам декан может вынести взыскание.</li>
+        </ul>
+    </div>
+
+    <!-- ГИЛЬДИИ -->
+    <div class="card">
+        <div class="card-h">⚔️ Гильдии и работа</div>
+        <ul>
+            <li><b>Гильдия Ремесла:</b> Основной способ заработка галлеонов, опыта и баллов факультету.
+                <span class="bot-path">Большой зал → Гильдия ремесла</span>
+            </li>
+            <li><b>Гильдия Защитников:</b> Дуэли с NPC и рейды на боссов. Собираясь в рейд, обязательно проверьте экипировку!
+                <span class="bot-path">Главное меню → Гильдия Защитников</span>
+            </li>
+            <li><b>Гильдия Чарокузнецов:</b> Здесь гоблины чинят вашу одежду и палочку. Помните: при нулевой прочности бонусы вещей отключаются.
+                <span class="bot-path">Дуэльный клуб → Инвентарь → Ремонт</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ЗАБОТА -->
+    <div class="card">
+        <div class="card-h">🦉 Покупки и питомцы</div>
+        <ul>
+            <li><b>Питомцы:</b> Ваши верные друзья. Они не умирают, но если они голодны, вы не получаете бонусов к характеристикам.
+                <span class="bot-path">Профиль → Мой питомец → Покормить</span>
+            </li>
+            <li><b>Магазины:</b> Всё необходимое (корм, одежда, палочки) покупается в Косом переулке за галлеоны.</li>
+            <li><b>Банк Гринготтс:</b> Помощь проекту (звезды) позволяет получить эксклюзивную форму для квиддича.</li>
+        </ul>
+    </div>
+
+    <!-- RP ПРАВИЛА -->
+    <div class="card">
+        <div class="card-h">📜 Этикет и RolePlay</div>
+        <ul>
+            <li><b>RolePlay:</b> Мы отыгрываем магов. Никакого "реала" на уроках. Слушайте профессора — за хороший отыгрыш можно получить до +10 баллов.</li>
+            <li><b>Посещение:</b> Если зашли на занятие — будьте до конца или вежливо попросите профессора вас отпустить.</li>
+            <li><b>Скрытый текст:</b> Маты, триггеры и спойлеры обязательно прячьте под черную плашку (spoiler).</li>
+        </ul>
+        <div class="alert-box">
+            <b>Внимание:</b> Декан имеет право исключить студента из гостиной навсегда после 5 зафиксированных нарушений.
+        </div>
+        <p align="center" style="margin-top: 20px;">
+            <a href="https://docs.google.com/document/d/1olqF-KLzWRd7DYzlN659CfUbUEgUfRbgb3GG5At82Ds/edit">Прочесть полный Устав (внутри промокод)</a>
+        </p>
+    </div>
+
+    <!-- КОНТАКТЫ -->
+    <div class="card">
+        <div class="card-h">🎓 Руководство</div>
+        <div class="staff-grid">
+            <div class="staff-item">🍏 <b>Декан:</b> <a href="https://t.me/nikatinka_me">Ника Слизеринская</a></div>
+            <div class="staff-item">📜 <b>Директор:</b> Роза Директриссовна</div>
+            <div class="staff-item">🐍 <b>Старосты:</b> лиза мать маришки и хто-то</div>
+            <div class="staff-item">🔄 <b>Перевод:</b> Для перехода к нам напиши декану свой ID и текущий факультет.</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-motto">Ambitio • Potentia • Puritas</div>
+        <div class="cookie">Общение-печенье. Следите за новостями школы.</div>
+    </footer>
+</div>
+
+</body>
+</html>
